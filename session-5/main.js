@@ -1,3 +1,19 @@
+console.log("***** Fundamentals 5 *****");
+
+// Functions:
+
+// Declaration (Global):
+function debitAccount(account, amount) {
+  account.total += amount;
+
+  return account;
+}
+
+// Invoke/Calling:
+const account = {
+  total: 0,
+};
+
 const amount = 100;
 
 const updatedAccount = debitAccount(account, amount);
@@ -17,7 +33,18 @@ const messageRenderer = (message = "Hello Everyone") => `Hello ${message}`;
 
 // Functions with default values:
 
-	const makeCoffee = (
+const makeCoffee = (
+  coffeeType = "americano",
+  coffeeOptions = {
+    hasMilk: true,
+    hasSugar: false,
+    toppings: [],
+  }
+) => {
+  console.log(
+    `Coffee ${coffeeType}, Coffee Options ${JSON.stringify(coffeeOptions)}`
+  );
+
   let coffeeMessage = "";
 
   if (coffeeType === "cappuccino") {
@@ -25,7 +52,18 @@ const messageRenderer = (message = "Hello Everyone") => `Hello ${message}`;
       coffeeMessage += `Added ${topping},`;
     });
 
-	const coffeeOptions = {
+    coffeeMessage += "Enjoy your " + coffeeType;
+  } else {
+    coffeeMessage = "Sorry we do not sell " + coffeeType;
+  }
+
+  return coffeeMessage;
+};
+
+const coffeeType = "cappuccino";
+const coffeeOptions = {
+  toppings: ["vanilla"],
+  hasSugar: true,
   hasMilk: false,
 };
 
