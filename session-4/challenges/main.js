@@ -44,3 +44,14 @@ const rpsResult = (x, y) => {
 };
 // Call function to determine who wins and log to console
 console.log(rpsResult(playerResult, cpuResult));
+
+// Selectors:
+
+// result-computer - computer outcomes this round
+// result-player - player outcomes this round
+// selection-rock
+// selection-paper
+// selection-scissors
+// final-result - display who won this round
+// computer-win-total - total number of computer wins
+// player-win-total - total number of player wins

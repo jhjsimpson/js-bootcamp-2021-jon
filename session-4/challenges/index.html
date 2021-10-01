@@ -5,9 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Rock, Paper, Scissors Challenge</h1>
+    <h1 id="heading">Rock, Paper, Scissors Challenge</h1>
+
+    <div class="result-group">
+      <img
+        class="result-item"
+        id="result-computer"
+        src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/rock.png"
+      />
+      <img
+        class="result-item"
+        id="result-player"
+        src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/paper.png"
+      />
+    </div>
+
+    <div class="selection-group">
+      <img
+        class="selection-item"
+        id="selection-rock"
+        src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/rock.png"
+      />
+      <img
+        class="selection-item"
+        id="selection-paper"
+        src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/paper.png"
+      />
+      <img
+        class="selection-item"
+        id="selection-scissors"
+        src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/scissors.png"
+      />
+    </div>
+    <p>Select an Option</p>
+    <br />
+    <div>
+      <h2>Result: <span id="final-result">0</span> Wins!</h2>
+      <h4>Computer: <span id="computer-win-total">0</span>, Player: <span>0</span id="player-win-total"></h4>
+    </div>
     <script defer src="main.js"></script>
   </body>
 </html>

@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+
+* {
+  font-family: "Exo 2";
+  text-align: center;
+}
+
+.body {
+  margin: 0;
+  display: flex;
+}
+
+#heading {
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+  margin: 0;
+  /*border: 3px solid red;*/
+}
+
+.result-group {
+  display: flex;
+  justify-content: center;
+  /*border: 3px solid red;*/
+}
+
+.result-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 30vh;
+  width: 30vh;
+}
+
+.selection-group {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  /*border: 3px solid red;*/
+}
+
+.selection-item {
+  height: 5%;
+  width: 5%;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
