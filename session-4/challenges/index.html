@@ -27,20 +27,23 @@
       <img
         class="selection-item"
         id="selection-rock"
+        onclick="playRock();"
         src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/rock.png"
       />
       <img
         class="selection-item"
         id="selection-paper"
+        onclick="playPaper();"
         src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/paper.png"
       />
       <img
         class="selection-item"
         id="selection-scissors"
+        onclick="playScissors();"
         src="https://rwest88.github.io/Rock-Paper-Scissors/assets/images/scissors.png"
       />
     </div>
-    <p>Select an Option</p>
+    <p>Select an Option, or press <button id="restart" onclick="restartGame();">Reset</button></p>
     <br />
     <div>
       <h2>Result: <span id="final-result">0</span> Wins!</h2>
