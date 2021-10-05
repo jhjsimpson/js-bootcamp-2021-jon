@@ -34,7 +34,9 @@ const playScissors = () => {
   play(findChoice);
 };
 
-// Game initialises
+playerScore = 0;
+
+// Game initialises based on selection
 function play(x) {
   let cpuResult = getRandomResult();
   // Change image function
@@ -56,8 +58,7 @@ function play(x) {
 // Function to add score
 addUpScore = (x) => {
   if (x === "Player Wins") {
-    let totalWins = "";
-    winResult.innerHTML = totalWins += 1;
+    winResult.innerHTML += playerScore;
   }
 };
 
