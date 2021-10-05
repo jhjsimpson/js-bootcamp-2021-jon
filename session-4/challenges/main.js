@@ -16,10 +16,10 @@ const paperSelect = document.getElementById("selection-paper");
 const scissorsSelect = document.getElementById("selection-scissors");
 const reset = document.getElementById("restart");
 let winResult = document.getElementById("final-result");
-const computerWins = document.getElementById("computer-wins-total");
-const playerWins = document.getElementById("player-wins-total");
+let computerWins = document.getElementById("computer-wins-total");
+let playerWins = document.getElementById("player-wins-total");
 
-// Save player choice to a variable on click and passes result to game initialisation
+// Save player choice to a variable on click and passes result to initialise game
 let findChoice = "";
 const playRock = () => {
   findChoice = "Rock";
@@ -34,11 +34,11 @@ const playScissors = () => {
   play(findChoice);
 };
 
-playerScore = 0;
-
 // Game initialises based on selection
 function play(x) {
   let cpuResult = getRandomResult();
+
+  // Repeating myself, could pass through function for the two below
   // Change image function
   resultComputer.src = imageChange(cpuResult);
 
@@ -55,10 +55,23 @@ function play(x) {
   addUpScore(finalResult);
 }
 
+// Declare and initialise variables
+let playerScore = 0;
+let computerScore = 0;
+
 // Function to add score
 addUpScore = (x) => {
   if (x === "Player Wins") {
-    winResult.innerHTML += playerScore;
+    playerScore += 1;
+    console.log(playerScore);
+    playerWins.innerHTML = playerScore;
+    winResult.innerHTML = x;
+  } else if (x === "Computer Wins") {
+    computerScore += 1;
+    computerWins.innerHTML = computerScore;
+    winResult.innerHTML = x;
+  } else {
+    winResult.innerHTML = x;
   }
 };
 
@@ -109,17 +122,14 @@ const rpsResult = (x, y) => {
   }
 };
 
-// Player restarts game
-function restartGame() {
+// Resets game
+reset.addEventListener("click", function () {
   console.log("Reset");
-  // playerWins = 0;
-  // computerWins = 0;
-  // Result = 0;
-  // resultComputer = default;
-  // resultPlayer = default;
-}
-
-// Call function to determine who wins and log to console
+  playerScore = 0;
+  playerWins.innerHTML = 0;
+  computerScore = 0;
+  computerWins.innerHTML = 0;
+});
 
 // Selectors:
 
