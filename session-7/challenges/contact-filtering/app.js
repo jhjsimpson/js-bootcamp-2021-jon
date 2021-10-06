@@ -86,3 +86,37 @@ const inputField = document.getElementById("filterInput");
 const filterNames = (event) => {};
 
 inputField.addEventListener("keyup", filterNames);
+
+/*
+//Get selectors
+const wordInput = document.getElementById('filterInput');
+const listOfNames = document.querySelectorAll('.collection-item');
+const listOfHeaders = document.querySelectorAll('.collection-header');
+
+//add event listener to the text input
+wordInput.addEventListener('keyup', function(event) {
+
+  const currentInput = event.target.value;
+  const currentInputCap = currentInput.toUpperCase();
+
+
+  let capitalLetters = [];
+  listOfNames.forEach(element => {
+    if(!element.innerText.toUpperCase().includes(currentInputCap)){
+      element.style.display = "none";
+    } else {
+      capitalLetters.push(element.innerText.slice(0,1));
+      element.style.display = "block";
+    }
+  });
+    // console.log(capitalLetters);
+  
+  listOfHeaders.forEach(element => {
+    if(!capitalLetters.includes(element.innerText)){
+      element.style.display = "none";
+    } else {
+      element.style.display = "block";
+    }
+  });
+})
+*/
